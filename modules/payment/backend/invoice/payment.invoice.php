@@ -12,7 +12,7 @@ class Callback {
         $notification = $this->getNotification();
 
         $type = $notification["notification_type"];
-        $id = $notification["order"]["id"];
+        $id = strstr($notification["order"]["id"], "-", true);
 
         $signature = $notification["signature"];
 
